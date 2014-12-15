@@ -1,0 +1,85 @@
+body {
+    margin-top: 15px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#container {
+    background: #F8F8F8;
+    width: 550px;
+    border: 2px solid #D8D8D8 ;
+    height: 500px;
+    margin-left:0;
+    color:#505050;
+    padding-left: 5px;
+}
+h3 {
+    color: #686868;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+header p {
+    margin-left: 30px;
+    margin-top: 0px;
+    
+}
+
+hr {
+    border-color: inherit;
+    color: #D8D8D8;
+}
+
+
+}
+input, textarea, label, select {
+    margin-top: 20px;
+}
+
+
+
+#send {
+    background-color: red;
+    color: white;
+    border-radius: 7px;
+    margin-left: 100px;
+    
+    
+}
+
+.input {
+    width: 350px;
+    margin-top: 20px;
+}
+
+#name {
+    margin-left: 20px;    
+}
+#email {
+    margin-left: 20px;  
+}
+
+textarea {
+    margin-left: 37px;
+    width: 350px;
+}
+span {
+    position: relative;
+    bottom: 42px;
+    left: 20px; 
+    
+}
+#drop-down {
+    margin-left: 20px;
+}
+select {
+    margin-left: 25px;
+    width: 350px;
+}
+p {
+    font-weight: bold;
+}
+
+
