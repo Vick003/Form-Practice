@@ -3,6 +3,7 @@
     <head>
         <title>Green Contact Form</title>
         <link type = "text/css" rel= "stylesheet" href= "ContactFormGreen.css">
+        <script src = "http://code.jquery.com/jquery-1.11.0.min.js"></script>
     </head>
 <body>
     <div id="form-container">
@@ -13,29 +14,66 @@
             </div>
         </header>
         <main>
+           <form id ="vicksform">
             <div id="name" class="push-left">
                 <p>Your Name:</p>
-                <input type="text" value="Name" class="input-field">
+                <input type="text" placeholder="Name" class="input-field" id="name-input">
             </div>
             <div id="email" class="push-left">
                 <p>Email:</p>
-                <input type="email" value="Email" class="input-field">
+                <input type="email" value="Email" class="input-field" required>
             </div>
             <div id="msg" class="push-left">
                 <p>Message:</p>
-                <textarea rows="7" value="Your Message to Us" class="input-field">Your Message to Us</textarea>
+                <textarea rows="7" placeholder="Your Message to Us" class="input-field"></textarea>
             </div>
             <div id="selector" class="push-left">
                 <p>Subject:</p>
                 <select class="input-field">
+                   <option></option>
                     <option value="Job Inquiry">Job Inquiry</option>
                 </select>
             </div>
             <div id="submit" class="push-left">
                 <input type="submit" value="Send" id="submit-button">
             </div>
+            </form>
         </main>
     </div>
+    <script>
+        function validate() {
+            
+           var name =  $('#name-input').val();
+            var msg = $('textarea').val();
+            var subject = $($('select option:selected')[0]).val();
+            
+            if (name.length < 3) {
+                alert("Name isn't long enough or its empty!");
+                return false;
+            }
+            
+            if (msg === "") {
+                alert("Message can't be empty!");
+                return false;
+                      
+            }
+            
+            if (subject === "") {
+                alert("Please select an option!");
+                return false;
+            }
+        return true;
+        
+        }
+        
+        $(document).ready(function(){
+            $('#vicksform').submit(validate);
+        
+        });
+    
+    
+    
+    </script>
 </body>
 </html>
 
